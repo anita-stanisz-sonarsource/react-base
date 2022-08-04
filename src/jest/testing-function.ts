@@ -1,6 +1,7 @@
 import { format } from 'date-fns';
 import orderBy from 'lodash/orderBy';
-import { guid } from '../utils/guid';
+// import { v4 } from 'uuid';
+import { randomUUID } from 'crypto';
 
 import { IGroupedTransactions, ITransaction, IPushedTransactions } from './types';
 
@@ -10,7 +11,7 @@ const timeFormat = 'HH:mm:ss';
 function mapTransactions(data: IPushedTransactions | undefined) {
     if (data) {
         return data.transactions.map((item) => ({
-            id: guid(),
+            id: randomUUID(),
             grossPrice: Number(item.grossPrice),
             productId: item.productId,
             productName: item.productName,
@@ -30,12 +31,12 @@ const groupTransactions = (newTrans: ITransaction[]): IGroupedTransactions[] => 
         for (const tran of orderedTrans) {
             const index = groupedItems.findIndex(x => x.date === tran.soldAt);
             if (index === -1) {
-                groupedItems.push({ 
+                groupedItems.push({
                     comparisonDate: new Date(tran.soldAt).getTime(),
-                    date: tran.soldAt, 
-                    index, 
-                    transactions: [tran], 
-                    alias: tran.serviceTypeAliasId, 
+                    date: tran.soldAt,
+                    index,
+                    transactions: [tran],
+                    alias: tran.serviceTypeAliasId,
                     id: tran.id
                 });
             } else {
