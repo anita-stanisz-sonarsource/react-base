@@ -1,6 +1,6 @@
 {
   "name": "react-app-wo-cra",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A simple react application without create react app",
   "main": "index.js",
   "scripts": {
