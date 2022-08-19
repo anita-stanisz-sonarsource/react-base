@@ -1,12 +1,15 @@
 import { Grid, MenuItem, MenuList, Skeleton } from "@mui/material";
 import { Suspense } from "react";
 import { HashRouter, Link, Route, Routes } from "react-router-dom";
+
+import AxiosPage from "../axios";
+import Error404Page from '../error-404-page/error-404-page';
 import FormikForm from "../formik";
 import HomePage from "../home-page";
-import Error404Page from '../error-404-page/error-404-page';
-import MaterialUIPage from "../material-ui";
-import AxiosPage from "../axios";
 import JestPage from "../jest";
+import MaterialUIPage from "../material-ui";
+import PrismJs from "../prismjs";
+import ReactRouter from ".";
 
 export default function Root() {
 
@@ -25,6 +28,12 @@ export default function Root() {
                     </MenuItem>
                     <MenuItem>
                         <Link to={MaterialUIPage.path}>Material UI</Link>
+                    </MenuItem>
+                    <MenuItem>
+                        <Link to={PrismJs.path}>Prism.js</Link>
+                    </MenuItem>
+                    <MenuItem>
+                        <Link to={ReactRouter.path}>React Router</Link>
                     </MenuItem>
                 </MenuList>
             </Grid>
@@ -50,6 +59,14 @@ export default function Root() {
                         <Route
                             path={HomePage.path}
                             element={<HomePage.LazyRender />}
+                        />
+                        <Route
+                            path={PrismJs.path}
+                            element={<PrismJs.LazyRender />}
+                        />
+                        <Route
+                            path={ReactRouter.path}
+                            element={<ReactRouter.LazyRender />}
                         />
                         <Route element={<Error404Page />} />
                     </Routes>
