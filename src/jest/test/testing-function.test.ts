@@ -212,7 +212,7 @@ describe('product-dashboard-utils', () => {
             expect(result[2].transactions.length).toEqual(1)
             expect(result[2].transactions[0].id).toEqual('test 1')
         })
-    })
+    });
 
     describe('mapTransactions', () => {
         it('should return an empty array when no data is sent.', () => {
@@ -240,7 +240,7 @@ describe('product-dashboard-utils', () => {
             expect(result[0].productName).toEqual('prod-1')
             expect(result[0].serviceTypeAliasId).toEqual('alias-1')
         })
-    })
+    });
 
     describe('mergeGroupedTransactions', () => {
         it('should insert a later transaction before the current transactions.', () => {
@@ -364,5 +364,5 @@ describe('product-dashboard-utils', () => {
             expect(result[0].id).toEqual('original-1')
             expect(result[1].id).toEqual('between')
         })
-    })
+    });
 })
