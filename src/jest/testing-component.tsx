@@ -5,7 +5,7 @@ const STATUS = {
     NORMAL: 'normal',
 };
 
-export default function TestingComponent({ id, page, children }: { id: string, page: string, children: React.ReactNode }) {
+export default function TestingComponent({ func, id, page, children }: { func: () => void, id: string, page: string, children: React.ReactNode }) {
     const [status, setStatus] = useState(STATUS.NORMAL);
 
     const onMouseEnter = () => {
@@ -23,6 +23,7 @@ export default function TestingComponent({ id, page, children }: { id: string, p
             href={page || '#'}
             onMouseEnter={onMouseEnter}
             onMouseLeave={onMouseLeave}
+            onAbort={func}
         >
             {children}
         </a>
