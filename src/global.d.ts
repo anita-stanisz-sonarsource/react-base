@@ -97,3 +97,7 @@ declare module '@ckeditor/ckeditor5-react' {
   }>
   export { CKEditor };
 }
+
+declare namespace T {
+  export type Omit<T, K extends keyof T> = Pick<T, Exclude<keyof T, K>>;
+}
