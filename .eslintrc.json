@@ -31,7 +31,7 @@
       "react/jsx-no-constructed-context-values": "error",
       "react/jsx-uses-react": "off",
       "react/no-unstable-nested-components": ["error", { "allowAsProps": true }],
-      "react/react-in-jsx-scope": "off"
+      "react/react-in-jsx-scope": "off",
       // "testing-library/no-node-access": ["error", { "allowContainerFirstChild": true }],
       // "no-implicit-coercion": [2, { "boolean": true, "number": true, "string": true }],
       // "jest/no-large-snapshots": ["warn", { "maxSize": 200 }],
@@ -39,6 +39,7 @@
       // // New rules added after updating eslint packages to more recent versions than eslint-config-sonarqube
       // "jest/prefer-mock-promise-shorthand": "error",
       // "typescript-sort-keys/interface": "error",
-      // "promise/catch-or-return": ["warn", { "allowThen": true, "allowFinally": true }]
+      "promise/catch-or-return": ["warn", { "allowThen": true, "allowFinally": true }],
+      "@typescript-eslint/explicit-function-return-type": "off"
     }
 }
