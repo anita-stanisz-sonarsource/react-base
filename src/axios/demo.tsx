@@ -1,22 +1,19 @@
-import { Card, CardContent, Skeleton, Typography } from "@mui/material";
-import useAxios from "axios-hooks";
+import { Card, CardContent, Skeleton, Typography } from '@mui/material'
+import useAxios from 'axios-hooks'
 
-export default function DemoAxios() {
+export default function DemoAxios () {
+  const [result] = useAxios<{
+    id: number
+    name: string
+    height: number
+    weight: number
+  }>('https://pokeapi.co/api/v2/pokemon/ditto')
 
-    const [result] = useAxios<{
-        id: number,
-        name: string,
-        height: number,
-        weight: number
-    }>('https://pokeapi.co/api/v2/pokemon/ditto');
-
-
-
-    return <>
+  return <>
 
         {
-            !result.loading && result.data
-                ? <Card>
+            !result.loading && (result.data != null)
+              ? <Card>
                     <CardContent>
 
                         <Typography gutterBottom variant="h5" component="div">
@@ -27,11 +24,11 @@ export default function DemoAxios() {
                         <Typography>Weight: {result.data.weight}</Typography>
                     </CardContent>
                 </Card>
-                : <Skeleton />
+              : <Skeleton />
         }
 
-        <pre style={{ padding: 20}}>
-            { 
+        <pre style={{ padding: 20 }}>
+            {
     `   const [result] = useAxios<{ 
         id: number,
         name: string,

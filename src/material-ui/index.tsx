@@ -1,8 +1,8 @@
-import { lazy } from 'react';
+import { lazy } from 'react'
 
 const MaterialUIPage = {
-    path: 'material-ui',
-    LazyRender: lazy(() => import('./material-ui'))
+  path: 'material-ui',
+  LazyRender: lazy(async () => await import('./material-ui'))
 }
 
-export default MaterialUIPage;
+export default MaterialUIPage

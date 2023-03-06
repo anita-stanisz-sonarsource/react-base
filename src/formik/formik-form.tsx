@@ -1,12 +1,11 @@
-import { Button, Container, Paper, Typography } from '@mui/material';
-import Heading from '../common/heading/heading';
+import { Button, Container, Paper, Typography } from '@mui/material'
+import Heading from '../common/heading/heading'
 
-import FormikImg from './hero6.webp';
-import DemoForm from './demo-form';
+import FormikImg from './hero6.webp'
+import DemoForm from './demo-form'
 
-export default function FormikForm() {
-
-    return <Container style={{ paddingTop: 10 }}>
+export default function FormikForm () {
+  return <Container style={{ paddingTop: 10 }}>
         <Heading
             imgUrl={FormikImg}
             title='Formik & Yup'
@@ -18,8 +17,8 @@ export default function FormikForm() {
             }
         >
             <Typography variant="body2" color="text.secondary">
-                Formik takes care of the repetitive and annoying stuff—keeping track of values/errors/visited 
-                fields, orchestrating validation, and handling submission—so you don't have to. This means you 
+                Formik takes care of the repetitive and annoying stuff—keeping track of values/errors/visited
+                fields, orchestrating validation, and handling submission—so you don't have to. This means you
                 spend less time wiring up state and change handlers and more time focusing on your business logic.
             </Typography>
             <br />
@@ -36,5 +35,5 @@ export default function FormikForm() {
         <Paper>
             <DemoForm />
         </Paper>
-    </Container>;
+    </Container>
 }

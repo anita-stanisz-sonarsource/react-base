@@ -1,12 +1,11 @@
 
-import { Button, Container, Typography } from "@mui/material";
-import Code from "../common/code-block/code";
-import Heading from "../common/heading/heading";
+import { Button, Container, Typography } from '@mui/material'
+import Code from '../common/code-block/code'
+import Heading from '../common/heading/heading'
 
-import image from './logo.png';
-export default function ReactRouterPage() {
-
-    return <Container style={{ paddingTop: 10 }}>
+import image from './logo.png'
+export default function ReactRouterPage () {
+  return <Container style={{ paddingTop: 10 }}>
         <Heading
             imgUrl={image}
             title='React Router'

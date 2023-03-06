@@ -1,7 +1,7 @@
-import PrismJs from "..";
+import PrismJs from '..'
 
 describe('prism-page', () => {
-    it('should load', () => {
-        expect(PrismJs.path).toEqual('prismjs');
-    })
+  it('should load', () => {
+    expect(PrismJs.path).toEqual('prismjs')
+  })
 })

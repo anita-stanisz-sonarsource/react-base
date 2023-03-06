@@ -1,8 +1,8 @@
-import { lazy } from 'react';
+import { lazy } from 'react'
 
 const FormikForm = {
-    path: 'formik',
-    LazyRender: lazy(() => import('./formik-form'))
-};
+  path: 'formik',
+  LazyRender: lazy(async () => await import('./formik-form'))
+}
 
-export default FormikForm;
+export default FormikForm

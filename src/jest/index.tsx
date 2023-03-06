@@ -1,8 +1,8 @@
-import { lazy } from 'react';
+import { lazy } from 'react'
 
 const JestPage = {
-    path: 'jest',
-    LazyRender: lazy(() => import('./jest'))
-};
+  path: 'jest',
+  LazyRender: lazy(async () => await import('./jest'))
+}
 
-export default JestPage;
+export default JestPage

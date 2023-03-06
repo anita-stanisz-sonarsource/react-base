@@ -1,8 +1,8 @@
-import { lazy } from 'react';
+import { lazy } from 'react'
 
 const ReactRouter = {
-    path: 'react-router',
-    LazyRender: lazy(() => import('./react-router'))
-};
+  path: 'react-router',
+  LazyRender: lazy(async () => await import('./react-router'))
+}
 
-export default ReactRouter;
+export default ReactRouter

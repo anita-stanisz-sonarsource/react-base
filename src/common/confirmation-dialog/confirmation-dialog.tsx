@@ -1,37 +1,37 @@
 
-import { Button, Dialog, DialogActions, DialogContent, DialogTitle, Typography } from '@mui/material';
-import { isString } from 'lodash';
+import { Button, Dialog, DialogActions, DialogContent, DialogTitle, Typography } from '@mui/material'
+import { isString } from 'lodash'
 
 interface Props {
-    show: boolean
-    title: string
-    children: React.ReactNode | string
-    confirmLabel?: string
-    cancelLabel?: string
-    onConfirm?: () => void
-    onCancel?: () => void
-    maxWidth?: 'xs' | 'sm' | 'md' | 'lg' | 'xl'
-    disableActions?: boolean
-    showCloseButton?: boolean
+  show: boolean
+  title: string
+  children: React.ReactNode | string
+  confirmLabel?: string
+  cancelLabel?: string
+  onConfirm?: () => void
+  onCancel?: () => void
+  maxWidth?: 'xs' | 'sm' | 'md' | 'lg' | 'xl'
+  disableActions?: boolean
+  showCloseButton?: boolean
 }
 
-export default function ConfirmationDialog(
-    {
-        show,
-        title,
-        children,
-        confirmLabel,
-        cancelLabel,
-        onConfirm,
-        onCancel,
-        maxWidth = 'sm',
-        disableActions = false,
-    }: Props
+export default function ConfirmationDialog (
+  {
+    show,
+    title,
+    children,
+    confirmLabel,
+    cancelLabel,
+    onConfirm,
+    onCancel,
+    maxWidth = 'sm',
+    disableActions = false
+  }: Props
 ) {
-    const confirm = confirmLabel ?? 'OK';
-    const cancel = cancelLabel ?? 'Cancel';
+  const confirm = confirmLabel ?? 'OK'
+  const cancel = cancelLabel ?? 'Cancel'
 
-    return <>
+  return <>
         <Dialog
             open={show}
             onClose={onCancel}
@@ -44,8 +44,8 @@ export default function ConfirmationDialog(
             <DialogContent>
                 {
                     isString(children)
-                        ? <Typography variant={'body1'} children={children} />
-                        : children
+                      ? <Typography variant={'body1'} children={children} />
+                      : children
                 }
             </DialogContent>
             {
@@ -65,5 +65,5 @@ export default function ConfirmationDialog(
                 </DialogActions>
             }
         </Dialog>
-    </>;
+    </>
 }

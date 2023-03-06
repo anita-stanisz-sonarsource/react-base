@@ -1,13 +1,13 @@
-import { Card, CardActions, CardContent, CardMedia, Typography } from "@mui/material";
+import { Card, CardActions, CardContent, CardMedia, Typography } from '@mui/material'
 
 interface IProps extends React.PropsWithChildren {
-    title: string, 
-    links: JSX.Element, 
-    imgUrl: string
+  title: string
+  links: JSX.Element
+  imgUrl: string
 }
 
-export default function Heading({ title, children, imgUrl, links }: IProps) {
-    return <Card >
+export default function Heading ({ title, children, imgUrl, links }: IProps) {
+  return <Card >
     <CardMedia
       component="img"
       height="300"
@@ -24,5 +24,5 @@ export default function Heading({ title, children, imgUrl, links }: IProps) {
     <CardActions>
         { links }
     </CardActions>
-  </Card>;
+  </Card>
 }

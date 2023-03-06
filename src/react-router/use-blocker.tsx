@@ -1,10 +1,10 @@
 
-import { UNSAFE_NavigationContext } from 'react-router-dom';
-import type { History, Blocker, Transition } from 'history';
-import { useContext, useEffect } from 'react';
+import { UNSAFE_NavigationContext } from 'react-router-dom'
+import type { History, Blocker, Transition } from 'history'
+import { useContext, useEffect } from 'react'
 
 /** Responsible for blocking navigation. */
-export function useBlocker(blocker: Blocker, when = true): void {
+export function useBlocker (blocker: Blocker, when = true): void {
   const navigator = useContext(UNSAFE_NavigationContext)
     .navigator as History
 
@@ -14,10 +14,10 @@ export function useBlocker(blocker: Blocker, when = true): void {
     const unblock = navigator.block((tx: Transition) => {
       const autoUnblockingTx = {
         ...tx,
-        retry() {
+        retry () {
           unblock()
           tx.retry()
-        },
+        }
       }
 
       blocker(autoUnblockingTx)

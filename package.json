@@ -6,7 +6,8 @@
   "scripts": {
     "start": "webpack-dev-server .",
     "build": "webpack .",
-    "test": "jest"
+    "test": "jest",
+    "lint": "eslint --ext js,ts,tsx,snap src"
   },
   "author": "",
   "license": "ISC",

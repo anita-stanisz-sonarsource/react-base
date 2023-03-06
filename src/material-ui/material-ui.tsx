@@ -1,11 +1,10 @@
-import { Button, Container, Typography } from '@mui/material';
-import Heading from '../common/heading/heading';
+import { Button, Container, Typography } from '@mui/material'
+import Heading from '../common/heading/heading'
 
-import image from './material-ui.png';
+import image from './material-ui.png'
 
-export default function MaterialUi() {
-
-    return <Container style={{ paddingTop: 10 }}>
+export default function MaterialUi () {
+  return <Container style={{ paddingTop: 10 }}>
         <Heading
             imgUrl={image}
             title='Material UI'
@@ -21,5 +20,5 @@ export default function MaterialUi() {
                 our fully-loaded component library, or bring your own design system to our production-ready components.
             </Typography>
         </Heading>
-    </Container>;
+    </Container>
 }

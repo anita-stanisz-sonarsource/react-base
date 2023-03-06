@@ -1,8 +1,8 @@
-import { lazy } from 'react';
+import { lazy } from 'react'
 
 const AxiosPage = {
-    path: 'axios',
-    LazyRender: lazy(() => import('./axios'))
+  path: 'axios',
+  LazyRender: lazy(async () => await import('./axios'))
 }
 
-export default AxiosPage;
+export default AxiosPage

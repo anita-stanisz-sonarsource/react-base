@@ -1,11 +1,10 @@
-import { render } from '@testing-library/react';
-import TestingComponent from "../testing-component";
-
+import { render } from '@testing-library/react'
+import TestingComponent from '../testing-component'
 
 it('changes the class when hovered', () => {
-    const result = render(
-        <TestingComponent func={() => { console.log('boom') }} id='test' page="https://www.facebook.com">Facebook</TestingComponent>,
-    );
+  const result = render(
+        <TestingComponent func={() => { console.log('boom') }} id='test' page="https://www.facebook.com">Facebook</TestingComponent>
+  )
 
-    expect(result.container.querySelector('#test')?.innerHTML).toEqual('Facebook');
-});
+  expect(result.container.querySelector('#test')?.innerHTML).toEqual('Facebook')
+})

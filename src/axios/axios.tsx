@@ -1,13 +1,11 @@
-import { Button, Container, Paper, Typography } from "@mui/material";
-import Heading from "../common/heading/heading";
-import DemoAxios from "./demo";
+import { Button, Container, Paper, Typography } from '@mui/material'
+import Heading from '../common/heading/heading'
+import DemoAxios from './demo'
 
-import image from './logo.svg';
+import image from './logo.svg'
 
-export default function AxiosPage() {
-    
-
-    return <Container style={{ paddingTop: 10 }}>
+export default function AxiosPage () {
+  return <Container style={{ paddingTop: 10 }}>
         <Heading
             imgUrl={image}
             title='Axios'
@@ -20,7 +18,7 @@ export default function AxiosPage() {
             }
         >
             <Typography variant="body2" color="text.secondary">
-                Axios is a simple promise based HTTP client for the browser and node.js. Axios provides a simple to 
+                Axios is a simple promise based HTTP client for the browser and node.js. Axios provides a simple to
                 use library in a small package with a very extensible interface.
             </Typography>
         </Heading>
@@ -31,5 +29,5 @@ export default function AxiosPage() {
         <Paper>
             <DemoAxios />
         </Paper>
-    </Container>;
+    </Container>
 }

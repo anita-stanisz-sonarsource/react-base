@@ -1,11 +1,11 @@
-import { useCallback, useEffect, useState } from 'react';
-import { useLocation, useNavigate } from 'react-router';
-import { useBlocker } from './use-blocker';
+import { useCallback, useEffect, useState } from 'react'
+import { useLocation, useNavigate } from 'react-router'
+import { useBlocker } from './use-blocker'
 
 /** Responsible for handling navigation and blocking in the event of unsaved data. */
-export function useCallbackPrompt(when: boolean): {
-  showPrompt: boolean,
-  confirmNavigation: () => void,
+export function useCallbackPrompt (when: boolean): {
+  showPrompt: boolean
+  confirmNavigation: () => void
   cancelNavigation: () => void
 } {
   const navigate = useNavigate()
@@ -21,7 +21,7 @@ export function useCallbackPrompt(when: boolean): {
   // handle blocking when user click on another route prompt will be shown
   const handleBlockedNavigation = useCallback(
     (nextLocation: any) => {
-        // in if condition we are checking next location and current location are equals or not
+      // in if condition we are checking next location and current location are equals or not
       if (
         !confirmedNavigation &&
         nextLocation.location.pathname !== location.pathname
@@ -32,7 +32,7 @@ export function useCallbackPrompt(when: boolean): {
       }
       return true
     },
-    [confirmedNavigation, location],
+    [confirmedNavigation, location]
   )
 
   const confirmNavigation = useCallback(() => {

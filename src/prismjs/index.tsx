@@ -1,8 +1,8 @@
-import { lazy } from 'react';
+import { lazy } from 'react'
 
 const PrismJs = {
-    path: 'prismjs',
-    LazyRender: lazy(() => import('./prismjs'))
-};
+  path: 'prismjs',
+  LazyRender: lazy(async () => await import('./prismjs'))
+}
 
-export default PrismJs;
+export default PrismJs

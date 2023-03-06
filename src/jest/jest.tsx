@@ -1,10 +1,10 @@
-import { Button, Container, Typography } from "@mui/material";
-import Heading from "../common/heading/heading";
+import { Button, Container, Typography } from '@mui/material'
+import Heading from '../common/heading/heading'
 
-import image from './logo.png';
+import image from './logo.png'
 
-export default function Jest() {
-    return <Container style={{ paddingTop: 10 }}>
+export default function Jest () {
+  return <Container style={{ paddingTop: 10 }}>
         <Heading
             imgUrl={image}
             title='Jest'
@@ -15,9 +15,9 @@ export default function Jest() {
             }
         >
             <Typography variant="body2" color="text.secondary">
-                Jest is a delightful JavaScript Testing Framework with a focus on simplicity. 
+                Jest is a delightful JavaScript Testing Framework with a focus on simplicity.
                 It works with projects using: Babel, TypeScript, Node, React, Angular, Vue and more!
             </Typography>
         </Heading>
-    </Container>;
+    </Container>
 }
