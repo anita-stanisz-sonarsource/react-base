@@ -123,16 +123,16 @@ module.exports = {
         ]
     },
     plugins: [
-        new CKEditorWebpackPlugin( {
-            // The main language that will be built into the main bundle.
-            language: 'en',
+        // new CKEditorWebpackPlugin( {
+        //     // The main language that will be built into the main bundle.
+        //     language: 'en',
 
-            // Additional languages that will be emitted to the `outputDirectory`.
-            // This option can be set to an array of language codes or `'all'` to build all found languages.
-            // The bundle is optimized for one language when this option is omitted.
-            additionalLanguages: 'all',
+        //     // Additional languages that will be emitted to the `outputDirectory`.
+        //     // This option can be set to an array of language codes or `'all'` to build all found languages.
+        //     // The bundle is optimized for one language when this option is omitted.
+        //     additionalLanguages: 'all',
 
-            // For more advanced options see https://github.com/ckeditor/ckeditor5-dev/tree/master/packages/ckeditor5-dev-webpack-plugin.
-        } )
+        //     // For more advanced options see https://github.com/ckeditor/ckeditor5-dev/tree/master/packages/ckeditor5-dev-webpack-plugin.
+        // } )
     ]
 }
