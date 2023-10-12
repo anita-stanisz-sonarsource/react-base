@@ -5,20 +5,20 @@
 [![Duplicated Lines (%)](https://sonarcloud.io/api/project_badges/measure?project=ShaneFindley_react-base&metric=duplicated_lines_density)](https://sonarcloud.io/summary/new_code?id=ShaneFindley_react-base)
 [![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=ShaneFindley_react-base&metric=reliability_rating)](https://sonarcloud.io/summary/new_code?id=ShaneFindley_react-base)
 
-## Installation 
+## Installation
 
 ```
-npm i --save-dev webpack 
-                 webpack-cli 
+npm i --save-dev webpack
+                 webpack-cli
                  webpack-dev-server
-npm i --save-dev typescript 
-                 tslint 
+npm i --save-dev typescript
+                 tslint
                  ts-loader
-npm i --save-dev babel-loader 
-                 @babel/preset-env 
-                 @babel/core 
-                 @babel/plugin-transform-runtime 
-                 @babel/preset-react 
+npm i --save-dev babel-loader
+                 @babel/preset-env
+                 @babel/core
+                 @babel/plugin-transform-runtime
+                 @babel/preset-react
                  @babel/preset-typescript
                  @babel/runtime
                  @babel/cli
@@ -27,7 +27,7 @@ npm i react react-dom
 npm i --save-dev @types/react @types/react-dom
 
 ```
-Process: 
+Process:
 
 * Create public folder, inside create index.html
 * [Create tslint.json](tslint.json)
