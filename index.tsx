@@ -17,6 +17,12 @@ new s32.Bucket(this, 'id', {
     bucketName: 'bucket'
 }); // Sensitive
 
+const s33 = require('aws-cdk-lib/aws-s3');
+
+new s33.Bucket(this, 'id', {
+    bucketName: 'bucket'
+}); // Sensitive
+
 root.render(
     <StrictMode>
         <App />
