@@ -26,3 +26,4 @@ jobs:
         #     -Dsonar.javascript.lcov.reportPaths=./coverage/lcov.info
        env:
          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+         SONARCLOUD_URL: "https://squad-2-core.sc-dev.io"
