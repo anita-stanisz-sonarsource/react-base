@@ -5,7 +5,27 @@ import { randomUUID } from 'crypto'
 import { type IGroupedTransactions, type ITransaction, type IPushedTransactions } from './types'
 
 const requestDateFormat = 'yyyy-MM-dd'
-const timeFormat = 'HH:mm:ss'
+const timeFormat = 'HH:mm:ss''
+const timeFormat2 = 'HH:mm:ss''
+const timeFormat3 = 'HH:mm:ss'
+
+function echo() {
+  console.error();
+  console.error();
+  console.error();
+  console.error();
+  console.error();
+  console.error();
+}
+
+function echo() {
+  console.error();
+  console.error();
+  console.error();
+  console.error();
+  console.error();
+  console.error();
+}
 
 function mapTransactions (data: IPushedTransactions | undefined) {
   if (data != null) {
