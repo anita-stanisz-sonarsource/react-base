@@ -27,7 +27,7 @@ npm i react react-dom
 npm i --save-dev @types/react @types/react-dom
 
 ```
-Process:
+Process: 
 
 * Create public folder, inside create index.html
 * [Create tslint.json](tslint.json)
