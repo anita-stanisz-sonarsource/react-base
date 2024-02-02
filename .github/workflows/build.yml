@@ -6,8 +6,8 @@ on:
  pull_request:
   types: [opened, synchronize, reopened]
 jobs:
- sonarcloud:
-   name: SonarCloud
+  sonarcloud_squad3:
+   name: SonarCloud_SQ3
    runs-on: ubuntu-latest
    steps:
      - uses: actions/checkout@v3
@@ -25,26 +25,5 @@ jobs:
         #     -Dsonar.projectKey=ShaneFindley_react-base
         #     -Dsonar.javascript.lcov.reportPaths=./coverage/lcov.info
        env:
-         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-         
- sonarcloud_squad2:
-   name: SonarCloud_SQ2
-   runs-on: ubuntu-latest
-   steps:
-     - uses: actions/checkout@v3
-       with:
-         fetch-depth: 0
-     - name: Install dependencies
-       run: npm install
-     - name: Test and coverage
-       run: npm run test --coverage
-     - name: SonarCloud Scan
-       uses: SonarSource/sonarcloud-github-action@master
-        # with:
-        #   args: >
-        #     -Dsonar.organization=shanefindley
-        #     -Dsonar.projectKey=ShaneFindley_react-base
-        #     -Dsonar.javascript.lcov.reportPaths=./coverage/lcov.info
-       env:
-         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN_SQ2 }}
-         SONARCLOUD_URL: "https://squad-2-core.sc-dev.io"
+         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN}}
+         SONARCLOUD_URL: "https://squad-3-core.sc-dev.io"
