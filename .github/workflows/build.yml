@@ -27,5 +27,5 @@ jobs:
         #     -Dsonar.projectKey=ShaneFindley_react-base
         #     -Dsonar.javascript.lcov.reportPaths=./coverage/lcov.info
        env:
-         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN_SQUAD_6}}
-         SONARCLOUD_URL: "https://squad-6-core.sc-dev.io"
+         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN_SQUAD_5}}
+         SONARCLOUD_URL: "https://squad-5-core.sc-dev.io"
