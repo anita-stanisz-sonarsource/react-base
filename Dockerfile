@@ -13,7 +13,6 @@ RUN yum install -y jq shadow-utils unzip \
   && yum clean all \
   && rm -rf /var/cache/yum
 
-
 # Http port
 EXPOSE 9000
 EXPOSE 9001
