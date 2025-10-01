@@ -20,7 +20,7 @@ jobs:
      - name: Test and coverage
        run: npm run test --coverage
      - name: SonarCloud Scan
-       uses: SonarSource/sonarcloud-github-action@v6
+       uses: SonarSource/sonarqube-scan-action@v6
         # with:
         #   args: >
         #     -Dsonar.organization=shanefindley
