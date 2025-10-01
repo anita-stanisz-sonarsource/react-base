@@ -29,3 +29,4 @@ jobs:
        env:
          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN_DEV12 }}
          SONARCLOUD_URL: "https://dev12.sc-dev12.io/"
+         API_BASE_URL: "https://api.sc-dev12.io"
