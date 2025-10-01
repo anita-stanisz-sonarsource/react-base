@@ -8,11 +8,11 @@ on:
 
   
 jobs:
-  sonarcloud_squad3:
+  sonarqube:
    name: SonarCloud_SQ3
    runs-on: ubuntu-latest
    steps:
-     - uses: actions/checkout@v3
+     - uses: actions/checkout@v4
        with:
          fetch-depth: 0
      - name: Install dependencies
@@ -20,7 +20,7 @@ jobs:
      - name: Test and coverage
        run: npm run test --coverage
      - name: SonarCloud Scan
-       uses: SonarSource/sonarcloud-github-action@master
+       uses: SonarSource/sonarcloud-github-action@v6
         # with:
         #   args: >
         #     -Dsonar.organization=shanefindley
