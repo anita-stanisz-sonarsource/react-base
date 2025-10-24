@@ -6,6 +6,8 @@ on:
  pull_request:
   types: [opened, synchronize, reopened]  
 
+
+
   
 jobs:
   sonarqube:
@@ -27,6 +29,6 @@ jobs:
         #     -Dsonar.projectKey=ShaneFindley_react-base
         #     -Dsonar.javascript.lcov.reportPaths=./coverage/lcov.info
        env:
-         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN_DEV12 }}
-         SONAR_HOST_URL: "https://dev12.sc-dev12.io/"
+         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN_DEV18 }}
+         SONAR_HOST_URL: "https://dev18.sc-dev18.io/"
      
