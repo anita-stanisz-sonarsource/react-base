@@ -27,6 +27,6 @@ jobs:
         #     -Dsonar.projectKey=ShaneFindley_react-base
         #     -Dsonar.javascript.lcov.reportPaths=./coverage/lcov.info
        env:
-         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN_DEV11 }}
-         SONAR_HOST_URL: "https://dev11.sc-dev11.io/"
+         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN_DEV18 }}
+         SONAR_HOST_URL: "https://dev18.sc-dev18.io/"
      
