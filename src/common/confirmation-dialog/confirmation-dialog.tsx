@@ -73,13 +73,12 @@ export default function ConfirmationDialog (
     onCancel,
     maxWidth = 'sm',
     disableActions = false
-  }: Props
+  }: Readonly<Props>
 ) {
   const confirm = confirmLabel ?? 'OK'
   const cancel = cancelLabel ?? 'Cancel'
 
-  return <>
-        <Dialog
+  return <Dialog
             open={show}
             onClose={onCancel}
             maxWidth={maxWidth}
@@ -87,30 +86,29 @@ export default function ConfirmationDialog (
             scroll={'body'}
             keepMounted={false}
         >
-            <DialogTitle children={title}/>
-            <DialogContent>
-                {
-                    isString(children)
-                      ? <Typography variant={'body1'} children={children} />
-                      : children
-                }
-            </DialogContent>
-            {
-                !disableActions && <DialogActions style={{ padding: 24 }}>
-                    <Button
-                        color={'secondary'}
-                        onClick={onCancel}
-                        children={cancel}
-                        variant='outlined'
-                    />
-                    <Button
-                        autoFocus
-                        children={confirm}
-                        onClick={onConfirm}
-                        variant='outlined'
-                    />
-                </DialogActions>
-            }
-        </Dialog>
-    </>
+          <DialogTitle children={title}/>
+          <DialogContent>
+              {
+                  isString(children)
+                    ? <Typography variant={'body1'} children={children} />
+                    : children
+              }
+          </DialogContent>
+          {
+              !disableActions && <DialogActions style={{ padding: 24 }}>
+                  <Button
+                      color={'secondary'}
+                      onClick={onCancel}
+                      children={cancel}
+                      variant='outlined'
+                  />
+                  <Button
+                      autoFocus
+                      children={confirm}
+                      onClick={onConfirm}
+                      variant='outlined'
+                  />
+              </DialogActions>
+          }
+      </Dialog>
 }
